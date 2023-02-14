@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.gameContainer {
+  display: flex;
+  gap: 100px;
+  margin: 60px 100px;
+}
+
+.container {
+  position: relative;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.play {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.containerTitle {
+  position: absolute;
+  top: -28px;
+  left: 50px;
+  padding: 10px 30px;
+  background-color: black;
+  border: 4px solid white;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.result {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+  height: 200px;
+}
