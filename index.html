@@ -16,18 +16,44 @@
     <section class="gameContainer">
       <article class="container play">
         <div class="containerTitle">멘토 영역</div>
-        <span class="result"></span>
+        <span id="mento" class="result"></span>
       </article>
+      <div id="start">클릭</div>
       <article class="container play">
         <div class="containerTitle">멘티 영역</div>
-        <span class="result">바위</span>
+        <span id="menti" class="result"></span>
       </article>
     </section>
     <article class="container winner">
       <div class="containerTitle">우승자</div>
-      <span class="result"></span>
+      <span id="result" class="result"></span>
     </article>
   </main>
+
+  <script>
+    // 데이터
+    const hand = [`가위`, `바위`, `보`];
+
+    // 변수
+    const start = document.querySelector(`#start`);
+    const mento = document.querySelector(`#mento`);
+    const menti = document.querySelector(`#menti`);
+    const result = document.querySelector(`#result`);
+    let count = null;
+
+    // 실행
+    start.addEventListener(`click`, () => {
+
+      let num = Math.trunc(Math.random() * 3);
+
+      mento.innerText = hand[num];
+      menti.innerText = num === 0 ? hand[1] : num === 1 ? hand[2] : hand[0];
+      result.innerText = `멘티 ${count > 0 ? '연속' + count + '승' : ''}`;
+
+      count++;
+
+    })
+  </script>
 </body>
 
 </html>
